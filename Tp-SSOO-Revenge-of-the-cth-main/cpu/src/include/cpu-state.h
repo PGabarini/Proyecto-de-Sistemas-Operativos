@@ -1,0 +1,29 @@
+#ifndef CPU_STATE_H_
+#define CPU_STATE_H_
+
+// Incluimos las bibliotecas necesarias:
+#include <stdlib.h>
+
+// Incluimos bibliotecas propias:
+#include "cpu-types.h"
+
+// Definimos las variables globales:
+extern t_config_cpu *config_cpu;
+extern t_contexto* contexto;
+extern int socket_dispatch;
+extern int socket_interrupt;
+extern int socket_memoria;
+extern char *id_cpu;
+
+extern int TAM_PAGINA;
+extern int ENTRADAS_POR_TABLA;
+extern int CANTIDAD_NIVELES;
+
+extern t_entrada_tlb *tlb;
+extern int timestamp_global;
+extern int puntero_fifo;
+
+extern t_entrada_cache *cache;
+extern int puntero_clock;
+
+#endif // CPU_STATE_H_
